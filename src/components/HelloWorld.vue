@@ -1,23 +1,133 @@
 <template>
   <v-container>
     <v-row>
+      <v-col cols="auto">
+        <v-card
+          class="mx-auto"
+          max-width="344"
+          title="Veeam"
+          subtitle="local"
+          height="130"
+        >
+          <template v-slot:prepend>
+            <v-icon icon="mdi-server" color="primary"></v-icon>
+          </template>
+          <template v-slot:append>
+            <v-icon icon="mdi-check" color="success"></v-icon>
+          </template>
+          <v-card-text>Connected</v-card-text>
+        </v-card>
+      </v-col>
+      <v-col cols="auto">
+        <v-card
+          class="mx-auto"
+          max-width="344"
+          title="Tahoe"
+          subtitle="remoted"
+          height="130"
+        >
+          <template v-slot:prepend>
+            <v-icon icon="mdi-server" color="primary"></v-icon>
+          </template>
+          <template v-slot:append>
+            <v-icon icon="mdi-close" color="error"></v-icon>
+          </template>
+          <v-card-text>Disconnected</v-card-text>
+        </v-card>
+      </v-col>
+
+      <v-col cols="auto">
+        <v-card
+          class="mx-auto"
+          max-width="344"
+          title="Veeam"
+          subtitle="local"
+          height="130"
+        >
+          <template v-slot:prepend>
+            <v-icon icon="mdi-server" color="primary"></v-icon>
+          </template>
+          <template v-slot:append>
+            <v-icon icon="mdi-check" color="success"></v-icon>
+          </template>
+          <v-card-text>Connected</v-card-text>
+        </v-card>
+      </v-col>
+      <v-col cols="auto">
+        <v-card
+          class="mx-auto"
+          max-width="344"
+          title="Tahoe"
+          subtitle="remoted"
+          height="130"
+        >
+          <template v-slot:prepend>
+            <v-icon icon="mdi-server" color="primary"></v-icon>
+          </template>
+          <template v-slot:append>
+            <v-icon icon="mdi-close" color="error"></v-icon>
+          </template>
+          <v-card-text>Disconnected</v-card-text>
+        </v-card>
+      </v-col>
+      <v-col cols="auto">
+        <v-card
+          class="mx-auto"
+          max-width="344"
+          title="Tahoe"
+          subtitle="remoted"
+          height="130"
+        >
+          <template v-slot:prepend>
+            <v-icon icon="mdi-server" color="primary"></v-icon>
+          </template>
+          <template v-slot:append>
+            <v-icon icon="mdi-close" color="error"></v-icon>
+          </template>
+          <v-card-text>Disconnected</v-card-text>
+        </v-card>
+      </v-col>
+
+      <v-col cols="auto">
+        <v-card
+          class="mx-auto"
+          title="Operation"
+          height="130"
+          subtitle="subtitle"
+        >
+          <template v-slot:prepend>
+            <v-icon icon="mdi-file-sync"></v-icon>
+          </template>
+          <!-- 
+          <v-card-item>
+            <div>
+              <div class="text-h6 mb-1">Headline</div>
+            </div>
+          </v-card-item> -->
+
+          <v-card-actions>
+            <v-btn> Upload </v-btn>
+            <v-btn> Dowload </v-btn>
+            <!-- <v-btn
+            :loading="loading3"
+            :disabled="loading3"
+            color="blue-grey"
+            class="white--text"
+            @click="loader = 'loading3'"
+            small
+          >
+            Upload
+            <v-icon right dark>mdi-cloud-upload</v-icon>
+          </v-btn> -->
+          </v-card-actions>
+        </v-card>
+      </v-col>
+    </v-row>
+    <v-row>
       <v-col cols="12">
-        <v-card flat>
+        <v-card>
           <v-card-title class="d-flex align-center pe-2">
-            Information
-          </v-card-title>
-          <v-row class="ma-1">
-            <v-btn
-              :loading="loading3"
-              :disabled="loading3"
-              color="blue-grey"
-              class="white--text"
-              @click="loader = 'loading3'"
-              small
-            >
-              Upload
-              <v-icon right dark>mdi-cloud-upload</v-icon>
-            </v-btn>
+            Dashboard
             <v-spacer></v-spacer>
 
             <v-text-field
@@ -30,7 +140,8 @@
               hide-details
               variant="solo-filled"
             ></v-text-field>
-          </v-row>
+          </v-card-title>
+
           <v-data-table-server
             v-model:items-per-page="itemsPerPage"
             :headers="headers"
